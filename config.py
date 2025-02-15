@@ -9,4 +9,5 @@ class Config:
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
     DEBUG = os.getenv('DEBUG', 'False') == 'True'
+    PORT = int(os.getenv('PORT', 5000))
 
