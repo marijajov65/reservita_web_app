@@ -12,7 +12,7 @@ class CourtRoutes(RoutesBase):
     def create_blueprint(self) -> Blueprint:
         court_bp = Blueprint('court', __name__)
 
-        @court_bp.route('/', methods=['GET'])
+        @court_bp.route('/all_courts', methods=['GET'])
         def get_courts():
             court_info = self.schedule_generator.get_court_info()
             if court_info:
